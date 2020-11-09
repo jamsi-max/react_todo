@@ -1,0 +1,8 @@
+.search{
+    display: inline-block;
+    vertical-align: middle;
+}
+.search-input {
+    margin-right: 3px;
+    padding: 0 10px;
+}
