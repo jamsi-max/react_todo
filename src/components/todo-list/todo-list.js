@@ -5,7 +5,14 @@ import './todo-list.css'
 
 
 const TodoList = ({ todos, onDeleted, 
-                    onToggleImportant, onToggleDone, search }) => {
+                    onToggleImportant, onToggleDone, search, filter }) => {
+
+    if (filter === 'done') {
+        todos = todos.filter((el)=>el.done)
+    }
+    if (filter === 'active') {
+        todos = todos.filter((el)=>!el.done)
+    }
 
     const todoFilter = todos.filter((el)=>el.label
                             .toLowerCase().includes(search.toLowerCase()));
